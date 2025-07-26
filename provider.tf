@@ -12,3 +12,6 @@ provider "azurerm" {
   subscription_id = "f5c092a3-a10b-4952-9791-a66c5de6792b"
 
 }
+
+
+This is related to RAN team
