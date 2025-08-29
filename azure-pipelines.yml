@@ -4,7 +4,7 @@ pool: Avnesh_group
 steps:
 - task: TerraformInstaller@1
   inputs:
-    terraformVersion: 'latest'
+    terraformVersion: '1.12.0'
 
 - task: TerraformTask@5
   inputs:
