@@ -11,9 +11,12 @@ steps:
     provider: 'azurerm'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/G10_Avnesh'
+    backendAzureRmUseEntraIdForAuthentication: false
     backendServiceArm: 'Avnesh'
     backendAzureRmStorageAccountName: 'avstorage12'
     backendAzureRmContainerName: 'avneshcontainer'
     backendAzureRmKey: 'Avnesh.tfstate'
+    backendAzureRmResourceGroupName: 'AV_RG'
+
 
     
