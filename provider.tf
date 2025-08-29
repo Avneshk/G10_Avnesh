@@ -2,16 +2,23 @@ terraform {
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
-      version = "1.38.0"
+      version = "4.32.0"
     }
   }
 }
 
-provider "azurerm" {
-  features {}
-  subscription_id = "f5c092a3-a10b-4952-9791-a66c5de6792b"
-
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "AV_RG"
+    storage_account_name = "avstorage12"
+    container_name       = "avneshcontainer"
+    key                  = "avnesh.tfstate"
+  }
 }
 
 
-This is related to RAN team
+
+provider "azurerm" {
+  features {}
+  subscription_id = "76095b6e-0585-402e-8e43-281835aebfd1"
+}
