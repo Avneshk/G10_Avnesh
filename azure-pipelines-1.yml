@@ -28,7 +28,7 @@ jobs:
   steps:
   - task: ManualValidation@1
     inputs:
-      notifyUsers: 'avneshkushwaha@gmail.com'
+      notifyUsers: 'avneshkushwaha1289@gmail.com'
       approvers: 'please approve'
 
 
