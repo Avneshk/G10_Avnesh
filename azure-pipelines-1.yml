@@ -1,4 +1,6 @@
-trigger: none
+trigger:
+- main  
+- frature101/*
 
 jobs:
 - job: Terrafomrinitoplan
