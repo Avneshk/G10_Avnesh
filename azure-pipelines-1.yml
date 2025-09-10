@@ -23,6 +23,15 @@ jobs:
       command: 'validate'
 
 
+- job: manualvalidation
+  pool: server
+  steps:
+  - task: ManualValidation@1
+    inputs:
+      notifyUsers: 'avneshkushwaha@gmail.com'
+      approvers: 'please approve'
+
+
 - job: Terraformplan
   displayName: Terraform plan 
   pool: Avnesh_group
