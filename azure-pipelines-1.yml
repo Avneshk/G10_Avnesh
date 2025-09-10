@@ -1,0 +1,22 @@
+trigger: none
+
+jobs:
+- job: Terrafomr init to plan
+  displayName: Terraform init to plan
+  pool: Avnesh_group
+  steps:
+    - 
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'Avnesh'
+    backendAzureRmStorageAccountName: 'avstorage1'
+    backendAzureRmContainerName: 'avcontainer1'
+    backendAzureRmKey: 'av.tfstate'
+    
+
+   
