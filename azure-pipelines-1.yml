@@ -17,5 +17,26 @@ jobs:
       backendAzureRmStorageAccountName: 'avstorage1'
       backendAzureRmContainerName: 'avcontainer1'
       backendAzureRmKey: 'av.tfstate'
+  - task: TerraformTask@5
+    inputs:
+      provider: 'azurerm'
+      command: 'validate'
 
-   
+
+- job: Terraformplan
+  displayName: Terraform plan 
+  pool: Avnesh_group
+  steps:
+  - task: TerraformTask@5
+    inputs:
+      provider: 'azurerm'
+      command: 'init'
+      backendServiceArm: 'Avnesh'
+      backendAzureRmStorageAccountName: 'avstorage1'
+      backendAzureRmContainerName: 'avcontainer1'
+      backendAzureRmKey: 'av.tfstate'
+  - task: TerraformTask@5
+    inputs:
+      provider: 'azurerm'
+      command: 'plan'
+      environmentServiceNameAzureRM: 'Avnesh'
