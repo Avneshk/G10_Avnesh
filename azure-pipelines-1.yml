@@ -29,7 +29,8 @@ jobs:
   - task: ManualValidation@1
     inputs:
       notifyUsers: 'avneshkushwaha1289@gmail.com'
-      approvers: 'please approve'
+      approvers: 'avneshkushwaha1289@gmail.com'
+      instructions: 'please approve'
 
 
 - job: Terraformplan
